@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bits = document.querySelectorAll('.bit');
     const terminalLines = document.querySelectorAll('.typing');
     const successLine = document.querySelector('.success');
+    const loginLine = document.querySelector('.login');
 
     const initializeLogo = () => {
         bits.forEach((bit, index) => {
@@ -48,6 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 successLine.style.transition = "all 0.4s ease-out";
             }
         }, 800 + (terminalLines.length * 400) + 300);
+
+        setTimeout(() => {
+            if (loginLine) {
+                loginLine.style.opacity = "1";
+                loginLine.style.transform = "scale(1.05)";
+                loginLine.style.transition = "all 0.4s ease-out";
+            }
+        }, 800 + (successLine.length * 400) + 300);
     };
 
     initializeLogo();
