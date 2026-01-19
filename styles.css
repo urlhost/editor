@@ -42,38 +42,22 @@ a {
 }
 
 .binary-logo {
-    /* Focus on a huge fixed size for mobile, scale up for desktop */
     font-size: 8rem; 
     font-weight: 900;
     letter-spacing: -0.05em;
     line-height: 0.7;
     cursor: default;
     display: flex;
-    flex-wrap: wrap; /* Allows bits to wrap if they hit the edge */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 5px;
 }
 
-/* On larger screens, make it even bigger */
 @media (min-width: 768px) {
     .binary-logo {
         font-size: 15rem;
         gap: 0;
     }
-}
-
-.bit {
-    display: inline-block;
-    opacity: 0.15;
-    transition: all 0.4s var(--easing);
-}
-
-.bit:hover {
-    opacity: 1;
-    color: var(--accent);
-    transform: scale(1.2);
-    text-shadow: 0 0 40px rgba(0, 122, 255, 0.8);
-    cursor: default !important;
 }
 
 .studio-text {
